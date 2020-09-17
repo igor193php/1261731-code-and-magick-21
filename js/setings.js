@@ -10,8 +10,8 @@ var wizardWidth = 70;
  * 
  * 
  */
-var getFireballSpeed = function() {
-
+var getFireballSpeed = function(isMovingLeft) {
+    return isMovingLeft ? 2 : 5;
 
 }
 
@@ -19,7 +19,7 @@ var getFireballSpeed = function() {
  * Возвращает высоту мага;
  * 
  */
-var getWizardHeight(wizardWidth) {
+var getWizardHeight() {
     return 1.337 * wizardWidth;
 
 }
@@ -29,8 +29,8 @@ var getWizardHeight(wizardWidth) {
  * Ширину и высоту игрового поля функция получает аргументом.
  * 
  */
-var getWizardX = function() {
-
+var getWizardX = function(gameFieldWidth) {
+    return (gameFieldWidth - wizardWidth) / 2;
 }
 
 /**
@@ -38,6 +38,6 @@ var getWizardX = function() {
  * Ширину и высоту игрового поля функция получает аргументом.
  * 
  */
-var getWizardY  = function() {
-
+var getWizardY  = function(gameFieldHeight) {
+    return gameFieldHeight / 3;
 }
