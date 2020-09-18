@@ -3,15 +3,12 @@
 var fireballSize = 22;
 var wizardSpeed = 3;
 var wizardWidth = 70;
+const FIRE_BALL_SPEED_IN_THE_WIND = 5;
+const FIRE_BALL_SPEED_AGAINST_THE_WIND = 2;
+const NUMBER_MATH_HEIGHT = 1.33; 
 
-/**
- * Возвращает скоростью фаербола в зависимости от направления ветра в игре. 
- * Направление функция будет получать аргументом; 
- * 
- * 
- */
 var getFireballSpeed = function(isMovingLeft) {
-    return isMovingLeft ? 2 : 5;
+    return isMovingLeft ? FIRE_BALL_SPEED_AGAINST_THE_WIND : FIRE_BALL_SPEED_IN_THE_WIND;
 
 }
 
@@ -20,7 +17,7 @@ var getFireballSpeed = function(isMovingLeft) {
  * 
  */
 var getWizardHeight() {
-    return 1.337 * wizardWidth;
+    return NUMBER_MATH_HEIGHT * wizardWidth;
 
 }
 
