@@ -16,7 +16,7 @@ var getFireballSpeed = function(isMovingLeft) {
  * Возвращает высоту мага;
  * 
  */
-var getWizardHeight() {
+var getWizardHeight = function () {
     return NUMBER_MATH_HEIGHT * wizardWidth;
 
 }
